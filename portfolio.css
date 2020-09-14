@@ -1,0 +1,75 @@
+@import url('./shared.css');
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 2rem);
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+main > p > em {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.125rem;
+}
+
+.hero {
+  --img: url('./background-lofi.jpg');
+  height: 400px;
+  width: 32rem;
+  position: relative;
+  display: flex;
+}
+
+.left, .center, .right {
+  background-image: var(--img);
+  background-size: cover;
+  width: 10rem;
+  will-change: width, transform, box-shadow;
+  transition: none 300ms ease-in-out;
+  transition-property: width, transform, box-shadow;
+}
+
+.left:hover, .center:hover, .right:hover {
+  width: 25rem;
+  transform: scale(calc(20 / 19.75));
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.left {
+  position: relative;
+  margin-right: 1rem;
+  background-position: 0% center;
+  overflow: hidden;
+}
+
+.left::before {
+  content: 'Hi!';
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--action-color);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+}
+
+.center {
+  background-position: center center;
+}
+
+.right {
+  margin-left: 1rem;
+  background-position: 100% center;
+}
