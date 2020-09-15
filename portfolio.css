@@ -9,16 +9,30 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
 }
 
-main > p > em {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 2rem;
-  letter-spacing: 0.125rem;
+section {
+  display: none;
+  line-height: 1.4;
+  max-width: 40rem;
+}
+
+section:target {
+  display: block;
+}
+
+/* Display home by default */
+#home {
+  display: block;
+}
+
+/* But hide it if another view is active */
+section:target ~ #home {
+  display: none;
 }
 
 .hero {
@@ -30,39 +44,61 @@ main > p > em {
 }
 
 .left, .center, .right {
+  flex: 1 1 auto;
   background-image: var(--img);
   background-size: cover;
   width: 10rem;
   will-change: width, transform, box-shadow;
   transition: none 300ms ease-in-out;
   transition-property: width, transform, box-shadow;
+  overflow: hidden;
+  position: relative;
 }
 
 .left:hover, .center:hover, .right:hover {
-  width: 25rem;
+  width: 100%;
   transform: scale(calc(20 / 19.75));
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .left {
-  position: relative;
   margin-right: 1rem;
   background-position: 0% center;
-  overflow: hidden;
 }
 
-.left::before {
-  content: 'Hi!';
+.left::before, .center::before, .center::after, .right::before {
+  position: absolute;
   font-size: 6rem;
   font-weight: 700;
   color: var(--action-color);
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
+}
 
-  position: absolute;
+.left::before {
+  content: 'Hi!';
+
   bottom: 0.5rem;
   left: 0.5rem;
   right: 0.5rem;
+}
+
+.center::before {
+  content: "Heya!";
+  font-size: 4rem;
+  left: min(14rem, 100%);
+  top: 0;
+  transform-origin: 2rem 2rem;
+  transform: translateX(1.5rem) rotate(90deg);
+}
+
+.right::before {
+  content: 'Welcome!';
+  font-size: 4rem;
+  right: min(14rem, 100%);
+  top: 0;
+  transform-origin: calc(100% - 2rem) calc(100% - 2rem);
+  transform: translateX(1rem) rotate(-90deg);
 }
 
 .center {
@@ -72,4 +108,60 @@ main > p > em {
 .right {
   margin-left: 1rem;
   background-position: 100% center;
+}
+
+#home p {
+  text-align: center;
+}
+
+#experience dd {
+  margin-bottom: 1rem;
+}
+
+#oss li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#oss h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#oss article {
+  border-bottom: 1px solid var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+#oss article:last-child {
+  border: 0;
+  margin-bottom: 0;
+}
+
+#oss h3 img {
+  height: 2rem;
+  width: 2rem;
+}
+
+@media print {
+  body {
+    --background-color: white;
+    --text-color: black;
+  }
+
+  #home {
+    order: -1;
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    display: none;
+  }
+
+  section {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
