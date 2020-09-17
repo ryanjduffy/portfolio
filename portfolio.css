@@ -17,7 +17,7 @@ main {
 
 section {
   display: none;
-  line-height: 1.4;
+  line-height: 1.8;
   max-width: 40rem;
 }
 
@@ -112,6 +112,10 @@ section:target ~ #home {
 
 #home p {
   text-align: center;
+}
+
+#history h3 {
+  margin-bottom: 0;
 }
 
 #experience dd {
