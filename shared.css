@@ -65,8 +65,47 @@ nav li:hover a {
 	color: var(--background-color);
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+}
+
 @media print {
 	nav {
 		display: none;
+	}
+
+	body {
+		--background-color: white;
+		--text-color: black;
+		font-size: 12pt;
+	}
+
+	main {
+		align-items: start
+	}
+
+	section {
+		display: block !important;
+		max-width: none;
+		line-height: 1.2;
+	}
+
+	h2 {
+		margin-block-start: 0.5rem;
+		margin-block-end: 0.5rem;
+	}
+	
+	header h3 {
+		margin-block-start: 0.5rem;
+	}
+
+	section#home {
+		order: -1;
+		font-size: 1.2rem;
+		align-self: center;
 	}
 }
