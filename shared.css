@@ -83,6 +83,7 @@ main {
 		--text-color: black;
 		font-size: 12pt;
 		display: block;
+		margin: 0;
 	}
 
 	main {
@@ -100,13 +101,21 @@ main {
 		margin-block-end: 0.5rem;
 	}
 	
-	header h3 {
+	header {
 		margin-block-start: 0.5rem;
+	}
+
+	header h3 {
+		margin-block-start: 0;
 	}
 
 	section#home {
 		order: -1;
 		font-size: 1.2rem;
 		align-self: center;
+	}
+
+	li {
+		break-inside: avoid;
 	}
 }

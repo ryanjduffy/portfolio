@@ -120,6 +120,10 @@ section:target ~ #home {
 	width: 100%;
 }
 
+#technology dt {
+	font-weight: 700;
+}
+
 #technology dd,
 #technology ul {
 	margin: 0;
@@ -128,7 +132,7 @@ section:target ~ #home {
 
 #technology dl {
 	display: grid;
-	gap: 2rem;
+	gap: 1rem 2rem;
 	grid-template-columns: min-content auto;
 	grid-template-rows: auto;
 }
@@ -143,9 +147,13 @@ section:target ~ #home {
 #technology li {
 	display: inline-block;
 	list-style: none;
-	width: 200px;
+	width: 30%;
 	margin-inline-end: 0.25rem;
 	white-space: nowrap;
+}
+
+#technology .two-column li {
+	width: 45%;
 }
 
 @media screen {
@@ -183,7 +191,12 @@ section:target ~ #home {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
+		line-height: 1.5rem;
+	}
+
+	#history header em {
+		flex-shrink: 0;
 	}
 
 	/* #oss {
