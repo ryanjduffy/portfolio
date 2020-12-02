@@ -82,6 +82,7 @@ main {
 		--background-color: white;
 		--text-color: black;
 		font-size: 12pt;
+		display: block;
 	}
 
 	main {

@@ -1,20 +1,5 @@
 @import url('./shared.css');
 
-body {
-	display: flex;
-	flex-direction: column;
-	min-height: calc(100vh - 2rem);
-	box-sizing: border-box;
-}
-
-main {
-	display: flex;
-	flex-direction: column;
-	flex: 1 1 auto;
-	align-items: center;
-	justify-content: center;
-}
-
 section {
 	display: none;
 	line-height: 1.8;
@@ -158,13 +143,29 @@ section:target ~ #home {
 #technology li {
 	display: inline-block;
 	list-style: none;
-	width: 250px;
-	margin: 0 0.5rem;
+	width: 200px;
+	margin-inline-end: 0.25rem;
+	white-space: nowrap;
 }
 
 @media screen {
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100vh - 2rem);
+		box-sizing: border-box;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.print-only {
-	display: none;
+		display: none;
 	}
 }
 
