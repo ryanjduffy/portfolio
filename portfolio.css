@@ -131,19 +131,35 @@ section:target ~ #home {
 	width: 2rem;
 }
 
+#technology {
+	width: 100%;
+}
+
+#technology dd,
 #technology ul {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: none;
-	justify-items: space-between;
-	align-items: flex-start;
+	margin: 0;
 	padding: 0;
 }
 
+#technology dl {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: min-content auto;
+	grid-template-rows: auto;
+}
+
+#technology ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
 #technology li {
+	display: inline-block;
 	list-style: none;
-	margin: 0 1rem;
-	width: calc(33% - 2rem);
+	width: 250px;
+	margin: 0 0.5rem;
 }
 
 @media screen {
@@ -153,6 +169,15 @@ section:target ~ #home {
 }
 
 @media print {
+	section {
+		max-width: none;
+	}
+
+	#about P {
+		display: inline;
+		margin: 0;
+	}
+
 	#history header {
 		display: flex;
 		flex-direction: row;

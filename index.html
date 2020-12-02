@@ -18,6 +18,19 @@
 		<section id="about">
 			<h2>About</h2>
 			<p>
+				I am a kind and loyal leader that excels at strategic planning and aligning people and work to achieve a
+				vision.
+				
+				<span class="more">
+					For the last 2.5 years, I've managed a team of 8 engineers building a UI framework supporting LG's
+					Smart TV platform. We built a team of high performing and collaborative engineers that consistently
+					shipped quality software on schedule. I am very proud of the product we built and culture we
+					fostered to help each other and our customers create great experiences for LG's products. I've
+					enjoyed the challenges of aligning people with the work, mentoring and coaching individuals to reach
+					their potential, and collaborating with technical, product, and design leads to deliver software.
+				</span>
+			</p>
+			<p>
 				I have worked with web technology for nearly 25 years with extensive knowledge and experience in HTML,
 				CSS, and JavaScript.
 				<span class="more">
@@ -34,19 +47,6 @@
 				<span class="more">
 					I recognize that there is no one tool that solves every problem and always look to balance the needs
 					of the business, the capabilities of the team, and the suitability of the technology.
-				</span>
-			</p>
-			<p>
-				I am a kind and loyal leader that excels at strategic planning and aligning people and work to achieve a
-				vision.
-				
-				<span class="more">
-					For the last 2.5 years, I've managed a team of 8 engineers building a UI framework supporting LG's
-					Smart TV platform. We built a team of high performing and collaborative engineers that consistently
-					shipped quality software on schedule. I am very proud of the product we built and culture we
-					fostered to help each other and our customers create great experiences for LG's products. I've
-					enjoyed the challenges of aligning people with the work, mentoring and coaching individuals to reach
-					their potential, and collaborating with technical, product, and design leads to deliver software.
 				</span>
 			</p>
 		</section>
@@ -141,7 +141,7 @@
 							Identify and resolve technical debt through refactoring.
 						</li>
 						<li>
-							Create automated testware to validate features and bug fixes.
+							Create automated test-ware to validate features and bug fixes.
 						</li>
 						<li>
 							Research and report on technical topics to improve our product.
@@ -155,10 +155,44 @@
 		</section>
 		<section id="technology" class="print-only">
 			<h2>Technology</h2>
-			<ul>
-				<li>HTML, Web Components, JavaScript, TypeScript, Flow, CSS, LESS, React, Webpack, Babel, Redux</li>
-				<li>API Design, Object-oriented Design, Serverless Architecture, Service-oriented Architecture</li>
-				<li>Node.JS, Express, Java, .NET, SQL, Docker</li>
+			<dl>
+				<dt>Architecture</dt>
+				<dd>
+					<ul>
+						<li>API Design</li>
+						<li>Object-oriented Design</li>
+						<li>Serverless Architecture</li>
+						<li>Service-oriented Architecture</li>
+					</ul>
+				</dd>
+				<dt>Front End</dt>
+				<dd>
+					<ul>
+						<li>Babel</li>
+						<li>CSS</li>
+						<li>Flow</li>
+						<li>HTML</li>
+						<li>JavaScript</li>
+						<li>LESS</li>
+						<li>React</li>
+						<li>Redux</li>
+						<li>TypeScript</li>
+						<li>Web Components</li>
+						<li>Webpack</li>
+					</ul>
+				</dd>
+				<dt>Back End</dt>
+				<dd>
+					<ul>
+						<li>Docker</li>
+						<li>Express</li>
+						<li>Java</li>
+						<li>Kubernetes</li>
+						<li>.NET</li>
+						<li>Node.JS</li>
+						<li>SQL</li>
+					</ul>
+				</dd>
 			</ul>
 		</section>
 		<section id="history">
@@ -170,41 +204,50 @@
 			<ul>
 				<li>
 					Managed a team of 8 software engineers through the consolidation of two managers to one, a
-					reorganization to align with overseas leadership, and the loss of persistent of product management.
+					reorganization to align with overseas leadership, and the loss of our project manager to
+					successfully deliver a large UI refresh for webOS smart TVs.
 				</li>
 				<li>
 					Created and regularly refined the product and technical road map and used the road map to communicate
-					priorities with customers, product management, and the team.
+					priorities with customers, product management, and the team which 
 				</li>
 				<li>
-					Reorganized our work definition processes which enabled to team to have improved focus and quicker
-					delivery of complete features and capabilities.
+					Reorganized our work definition processes to align with our road map which enabled to team to have
+					improved focus and quicker delivery of complete features and capabilities.
 				</li>
 				<li>
-					Implemented semantic versioning of ours products to improve predictability for consumers and release
-					clarity for our team.
+					Championed and implemented semantic versioning of our products to improve predictability for
+					consumers and release clarity for our team.
 				</li>
 				<li>
-					Implemented key features across the Enact framework and supporting tooling including:
+					Implemented key features across the Enact framework and supporting tooling.
 					<ul>
 						<li>
-							Supporting capabilities like <a
+							Implemented a <a
 							href="https://github.com/enactjs/enact/blob/master/packages/core/kind">component
-							factories</a>
-							or <a
-							href="https://github.com/enactjs/enact/blob/master/packages/core/handle">declarative
-							event handler libraries</a> to enable app development.
+							factories</a> that standardized how framework components were created and allowed for easier
+							and consistent feature extensions over time.
 						</li>
 						<li>
-							Reusable components and behaviors such as <a
+							Created a <a
+							href="https://github.com/enactjs/enact/blob/master/packages/core/handle">declarative event
+							handler library</a> which improved code readability and consistency.
+						</li>
+						<li>
+							Implemented a <a
 							href="https://github.com/enactjs/enact/blob/master/packages/ui/ViewManager">generalized view
-							management</a>
-							or <a href="https://github.com/enactjs/enact/tree/master/packages/ui/Touchable">UI gesture
-							support</a>.
+							management</a> component that was the basis for several key UI components including the
+							picker components and several app panel components across multiple UI libraries.
 						</li>
 						<li>
-							Developer experience improvements including a tool to generate TypeScript definitions from
-							JSDocs.
+							Added <a href="https://github.com/enactjs/enact/tree/master/packages/ui/Touchable">gesture
+							support</a> to across all framework components which provided consistent handling for hold,
+							drag, and flick events. 
+						</li>
+						<li>
+							Implemented a a tool to generate TypeScript definitions from JSDocs and integrated it into
+							the build and release process providing support for TypeScript users and improved code
+							hinting for all framework users.
 						</li>
 					</ul>
 				</li>
@@ -233,7 +276,7 @@
 				<p>
 					<a href="https://enactjs.com/">Enact</a> is a React-based UI framework built to support application
 					development on webOS. I was the architecture lead for the project and a <a
-					href="https://github.com/enactjs/enact/graphs/contributors">leading contributer</a>.
+					href="https://github.com/enactjs/enact/graphs/contributors">leading contributor</a>.
 				</p>
 				<p>
 					I'm most proud of the team and culture we built and the flexibility we designed into the system but
